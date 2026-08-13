@@ -1,0 +1,5 @@
+Column name	Start date	End date
+Primary works, Secondary works	01.08.2026	28.08.2026
+Supply, Installation, Commissioning	01.08.2026	28.08.2026
+Preparation, Groundwork, Access	10.08.2026	11.09.2026
+Protection, Enclosure, Finishing	28.08.2026	18.09.2026
