@@ -8,18 +8,11 @@ Paste a table, get a Gantt chart. Open it in a browser and it works, including o
 
 - Download `gantt-chart-maker.html` and open it
 - Paste data from a spreadsheet into the `Tasks` box
-- Press `Build chart`
+- Chart will be updated once data is changed
+- Press `Update chart` if needed
 
 ## Data format
-
-One task per line, tab-separated (that's what you get when you copy from a spreadsheet):
-
-```
-Model section	Element categories	Start date	End date
-Superstructure	Walls, Doors and gates	01.08.2026	28.08.2026
-Substructure	Foundations, Floor slabs, Ramps	10.08.2026	11.09.2026
-```
-
+- One task per line, **tab-separated** (that's what you get when you copy from a spreadsheet)
 - The **last two columns** are the start and end dates.
 - **Everything before them** becomes its own label column to the left of the chart — however many you paste.
 - A first row without dates is detected as a header and used for the column headings.
