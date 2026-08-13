@@ -207,7 +207,7 @@ Protection, Enclosure, Finishing	28.08.2026	18.09.2026</textarea>
         Text wraps by word. To break a line yourself, put <code>|</code> or <code>\n</code> inside the cell.
       </div>
       <div class="btn-row">
-        <button class="primary" id="buildBtn">Build chart</button>
+        <button class="primary" id="buildBtn">Update chart</button>
         <button id="pngBtn">Download PNG</button>
       </div>
       <div id="status"></div>
@@ -545,12 +545,23 @@ function downloadPng(){
   link.href = canvas.toDataURL('image/png');
   link.click();
 }
-buildBtn.addEventListener('click', build);
-pngBtn.addEventListener('click', downloadPng);
+// redraw shortly after typing stops, so every keystroke doesn't rebuild the canvas
+let redrawTimer = null;
+function scheduleBuild(delay){
+  clearTimeout(redrawTimer);
+  redrawTimer = setTimeout(build, delay === undefined ? 300 : delay);
+}
+dataInput.addEventListener('input', () => scheduleBuild());
+titleInput.addEventListener('input', () => scheduleBuild());
 maxColWidthInput.addEventListener('input', () => {
   maxColWidthOut.textContent = maxColWidthInput.value + ' px';
-  if(lastData) build();
+  scheduleBuild(60);   // slider feels laggy at 300 ms
 });
+buildBtn.addEventListener('click', () => {
+  clearTimeout(redrawTimer);
+  build();
+});
+pngBtn.addEventListener('click', downloadPng);
 maxColWidthOut.textContent = maxColWidthInput.value + ' px';
 build();
 </script>
