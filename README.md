@@ -2,7 +2,7 @@
 
 Paste a table, get a Gantt chart. Open it in a browser and it works, including offline.
 
-**[Download](https://github.com/Data0000001/gantt-chart-maker/releases/latest/download/gantt-chart-maker.html)** — one HTML file, no install.
+**[Download](gantt-chart-maker.html)** — one HTML file, no install.
 
 ## How to use
 
