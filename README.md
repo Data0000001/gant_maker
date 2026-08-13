@@ -1,6 +1,6 @@
 # Gantt Chart Maker
 
-Paste a table, get a Gantt chart. Open it in a browser and it works, including offline.
+Paste a table, get a Gantt chart. Open it in a browser and it works.
 
 **[Download](https://github.com/Data0000001/gant_maker/releases/latest/download/gantt-chart-maker.html)** — one HTML file, no install.
 
