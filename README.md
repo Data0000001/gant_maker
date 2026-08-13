@@ -5,6 +5,8 @@ Paste a table, get a Gantt chart. Open it in a browser and it works, including o
 ## How to use
 
 Download `Gant Chart Maker.html` and open it
+Paste spreadsheet data from to `Tasks` box
+Press generate `Build chart`
 
 ## Data format
 
